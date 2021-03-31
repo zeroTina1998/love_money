@@ -14,5 +14,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #333;
+  font-size: 16px;
 }
 </style>
