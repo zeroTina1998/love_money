@@ -16,6 +16,7 @@
 </template>
 
 <script lang="ts">
+import "~@/assets/style/helper.scss";
 export default {
   name: "Nav",
 };
@@ -40,7 +41,7 @@ nav {
     }
   }
   > .item.selected {
-    color: red;
+    color: $color-highlight;
   }
 }
 </style>
