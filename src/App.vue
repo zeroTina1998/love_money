@@ -15,5 +15,6 @@ body {
   text-align: center;
   color: #333;
   font-size: 16px;
+  background: #f5f5f5;
 }
 </style>
