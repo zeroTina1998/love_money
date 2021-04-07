@@ -1,14 +1,10 @@
 <template>
   <Layout class-prefix="layout">
     {{ record }}
-    <Tags
-      :dataSource.sync="tags"
-      @update:value="onUpdateTags"
-      @submit="saveRecord"
-    />
+    <Tags :dataSource.sync="tags" @update:value="onUpdateTags" />
     <Notes @update:value="onUpdateTags" />
     <Types :value.sync="record.type" />
-    <NumberPad @update:value="onUpdateAmount" />
+    <NumberPad @update:value="onUpdateAmount" @submit="saveRecord" />
   </Layout>
 </template>
 
@@ -43,7 +39,8 @@ export default class Money extends Vue {
     this.record.amount = parseFloat(value);
   }
   saveRecord() {
-    this.recordList.push(this.record);
+    const record2 = JSON.parse(JSON.stringify(this.record));
+    this.recordList.push(record2);
     console.log(this.recordList);
   }
   @Watch("recordList")
