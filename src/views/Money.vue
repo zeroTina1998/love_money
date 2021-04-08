@@ -1,5 +1,6 @@
 <template>
   <Layout class-prefix="layout">
+    {{ record }}
     <Tags :dataSource.sync="tags" @update:value="onUpdateTags" />
     <div class="notes">
       <FormItem
