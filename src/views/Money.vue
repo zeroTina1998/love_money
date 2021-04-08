@@ -1,7 +1,11 @@
 <template>
   <Layout class-prefix="layout">
     <Tags :dataSource.sync="tags" @update:value="onUpdateTags" />
-    <Notes @update:value="onUpdateTags" />
+    <Notes
+      field-name="备注"
+      placeholder="在这里输入备注"
+      @update:value="onUpdateTags"
+    />
     <Types :value.sync="record.type" />
     <NumberPad @update:value="onUpdateAmount" @submit="saveRecord" />
   </Layout>
