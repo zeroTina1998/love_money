@@ -20,8 +20,8 @@
 <script lang="ts">
 import Vue from "vue";
 import { Component } from "vue-property-decorator";
-import tagListModel from "@/models/tagListModel";
-import Button from "@/components/Button.vue";
+import tagListModel from "../models/tagListModel";
+import Button from "../components/Button.vue";
 const tags = tagListModel.fetch();
 
 @Component({

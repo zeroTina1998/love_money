@@ -19,6 +19,7 @@
 <script lang="ts">
 import Vue from "vue";
 import { Component, Prop } from "vue-property-decorator";
+import tagListModel from "../../models/tagListModel";
 @Component
 export default class Tags extends Vue {
   @Prop() dataSource: string[] | undefined;
@@ -30,7 +31,6 @@ export default class Tags extends Vue {
     } else {
       this.selectedTags.push(tag);
     }
-
     this.$emit("update:value", this.selectedTags);
   }
   create() {
