@@ -37,7 +37,6 @@ type RecordItem = {
   components: { Tags, FormItem, Types, NumberPad },
 })
 export default class Money extends Vue {
-  tags = window.tagList;
   recordList: RecordItem[] = recordListModel.fetch();
   record: RecordItem = { tags: [], notes: "", type: "-", amount: 0 };
   onUpdateTags(value: string[]) {
